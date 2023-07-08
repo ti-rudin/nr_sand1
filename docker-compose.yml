@@ -1,0 +1,18 @@
+version: "3.7"
+
+services:
+  node-red:
+    container_name: node-red
+    build:
+      context: .
+      dockerfile: ./nodered2.Dockerfile
+    environment:
+      - TZ=Europe/Moscow
+    ports:
+      - "1880:1880"
+    volumes:
+      - ./node-red-data2:/data 
+
+volumes:
+  node-red-data2:
+
