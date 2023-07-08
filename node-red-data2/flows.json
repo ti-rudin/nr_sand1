@@ -27,12 +27,10 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 250,
-        "y": 180,
+        "x": 220,
+        "y": 240,
         "wires": [
-            [
-                "e628d7a5e0c2bfec"
-            ]
+            []
         ]
     },
     {
@@ -50,5 +48,53 @@
         "x": 580,
         "y": 200,
         "wires": []
+    },
+    {
+        "id": "eec4871d3a810faa",
+        "type": "inject",
+        "z": "2c04b82b54e7c438",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 180,
+        "y": 320,
+        "wires": [
+            [
+                "e94bc7ed37d43c2f"
+            ]
+        ]
+    },
+    {
+        "id": "e94bc7ed37d43c2f",
+        "type": "function",
+        "z": "2c04b82b54e7c438",
+        "name": "function 1",
+        "func": "msg.payload = {a:\"ddd\"};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 340,
+        "y": 320,
+        "wires": [
+            [
+                "e628d7a5e0c2bfec"
+            ]
+        ]
     }
 ]
